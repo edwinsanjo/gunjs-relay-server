@@ -2,7 +2,8 @@ const express = require('express')
 const Gun = require('gun')
 
 const app = express()
-const port = 8000
+const port = process.env.PORT || 8000
+
 app.use(Gun.serve)
 
 const server = app.listen(port, () => {
